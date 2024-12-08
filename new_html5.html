@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive HTML5 Form</title>
+</head>
+<body>
+    <main>
+        <h1>Comprehensive HTML5 Form</h1>
+
+        <!-- Previous forms section -->
+        <section aria-labelledby="basic-inputs-heading">
+            <h2 id="basic-inputs-heading">Basic Input Types</h2>
+
+            <!-- Task 1: Email Input -->
+            <form id="emailForm">
+                <h3>Email Input</h3>
+                <div role="group" aria-labelledby="email-label">
+                    <label id="email-label" for="email">Email Address:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email address"
+                        aria-required="true"
+                        required
+                    >
+                    <button type="submit">Submit Email</button>
+                </div>
+            </form>
+
+            <!-- Task 2: Number Input -->
+            <form id="numberForm">
+                <h3>Number Input</h3>
+                <div role="group" aria-labelledby="quantity-label">
+                    <label id="quantity-label" for="quantity">Quantity:</label>
+                    <input 
+                        type="number" 
+                        id="quantity" 
+                        name="quantity"
+                        placeholder="Enter quantity"
+                        min="1"
+                        max="100"
+                        step="1"
+                        aria-required="true"
+                        required
+                    >
+                    <button type="submit">Submit Quantity</button>
+                </div>
+            </form>
+
+            <!-- Task 3: Date Input -->
+            <form id="dateForm">
+                <h3>Date Input</h3>
+                <div role="group" aria-labelledby="date-label">
+                    <label id="date-label" for="date">Select Date:</label>
+                    <input 
+                        type="date" 
+                        id="date" 
+                        name="date"
+                        min="2024-01-01"
+                        max="2024-12-31"
+                        aria-required="true"
+                        required
+                    >
+                    <button type="submit">Submit Date</button>
+                </div>
+            </form>
+
+            <!-- Task 4: Range Input -->
+            <form id="rangeForm">
+                <h3>Range Input</h3>
+                <div role="group" aria-labelledby="range-label">
+                    <label id="range-label" for="range">Rating (1-10):</label>
+                    <input 
+                        type="range" 
+                        id="range" 
+                        name="range"
+                        min="1"
+                        max="10"
+                        step="1"
+                        value="5"
+                        oninput="rangeValue.textContent = this.value"
+                        aria-valuemin="1"
+                        aria-valuemax="10"
+                        aria-valuenow="5"
+                        aria-required="true"
+                        required
+                    >
+                    <span id="rangeValue" aria-live="polite">5</span>
+                    <button type="submit">Submit Rating</button>
+                </div>
+            </form>
+
+            <!-- Task 5: Color Input -->
+            <form id="colorForm">
+                <h3>Color Input</h3>
+                <div role="group" aria-labelledby="color-label">
+                    <label id="color-label" for="color">Select Color:</label>
+                    <input 
+                        type="color" 
+                        id="color" 
+                        name="color"
+                        value="#ff4000"
+                        aria-required="true"
+                        required
+                    >
+                    <button type="submit">Submit Color</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Assignment 1: Task 1 - Selection Experience Section -->
+        <section aria-labelledby="selection-heading">
+            <h2 id="selection-heading">Programming Preferences</h2>
+            <form id="preferencesForm">
+                <!-- Programming Language Menu -->
+                <div role="group" aria-labelledby="language-label">
+                    <label id="language-label" for="programming-language">Favorite Programming Language:</label>
+                    <select 
+                        id="programming-language" 
+                        name="programming-language"
+                        aria-required="true"
+                        required
+                    >
+                        <option value="">Select a language</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="csharp">C#</option>
+                        <option value="cpp">C++</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </div>
+
+                <!-- Experience Level Radio Buttons -->
+                <div role="radiogroup" aria-labelledby="expertise-label">
+                    <p id="expertise-label">Experience Level:</p>
+                    <div>
+                        <input 
+                            type="radio" 
+                            id="beginner" 
+                            name="expertise" 
+                            value="beginner"
+                            required
+                        >
+                        <label for="beginner">Beginner</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="radio" 
+                            id="intermediate" 
+                            name="expertise" 
+                            value="intermediate"
+                        >
+                        <label for="intermediate">Intermediate</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="radio" 
+                            id="advanced" 
+                            name="expertise" 
+                            value="advanced"
+                        >
+                        <label for="advanced">Advanced</label>
+                    </div>
+                </div>
+
+                <!-- Development Platforms Checkboxes -->
+                <div role="group" aria-labelledby="platforms-label">
+                    <p id="platforms-label">Preferred Development Platforms:</p>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="web" 
+                            name="platforms" 
+                            value="web"
+                        >
+                        <label for="web">Web Development</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="mobile" 
+                            name="platforms" 
+                            value="mobile"
+                        >
+                        <label for="mobile">Mobile Development</label>
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            id="desktop" 
+                            name="platforms" 
+                            value="desktop"
+                        >
+                        <label for="desktop">Desktop Development</label>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Preferences</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
